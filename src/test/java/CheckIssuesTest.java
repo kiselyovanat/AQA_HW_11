@@ -29,7 +29,6 @@ public class CheckIssuesTest extends TestBase {
 
     @Test
     public void checkIssueTestWithLambdaSteps() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Открываем главную страницу Github", () -> {
                     open("/");
@@ -60,7 +59,6 @@ public class CheckIssuesTest extends TestBase {
     @Test
     public void checkIssueTestWitAnnotatedSteps() {
         RepositoryPage repositoryPage = new RepositoryPage();
-        SelenideLogger.addListener("allure", new AllureSelenide());
 
         repositoryPage.openPage()
                 .searchRepository(repositoryName)
